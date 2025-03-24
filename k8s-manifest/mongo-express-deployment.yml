@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: mongo-express-container
-        image: mongo-express
+        image: 192.168.126.128:8083/repository/docker-repo/mongo-express
         ports:
         - containerPort: 8081
         

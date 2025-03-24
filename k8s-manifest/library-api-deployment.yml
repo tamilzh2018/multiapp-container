@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: library-api-container
-        image: node
+        image: 192.168.126.128:8083/repository/docker-repo/mern_docker_demo_library-api
         ports:
         - containerPort: 5000
         

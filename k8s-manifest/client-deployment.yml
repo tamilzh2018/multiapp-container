@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: client-api-container
-        image: nginx
+        image: 192.168.126.128:8083/repository/docker-repo/mern_docker_demo_client
         ports:
         - containerPort: 80

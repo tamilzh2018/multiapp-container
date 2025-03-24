@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: nginx-container
-        image: nginx
+        image: 192.168.126.128:8083/repository/docker-repo/mern_docker_demo_nginx
         ports:
         - containerPort: 8080
         
