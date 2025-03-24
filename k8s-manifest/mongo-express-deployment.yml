@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mongo-express-gui
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mongo-express-gui
+  template:
+    metadata:
+      name: mongo-express-gui
+      labels:
+        app: mongo-db-deploy
+    spec:
+      containers:
+      - name: mongo-express-container
+        image: mongo-express
+        ports:
+        - containerPort: 8081
+        
