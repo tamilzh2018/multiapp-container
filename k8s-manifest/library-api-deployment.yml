@@ -12,6 +12,8 @@ spec:
       labels:
         app: library-api
     spec:
+      imagePullSecrets:
+      - name: docker-cred
       containers:
       - name: library-api-container
         image: 192.168.126.128:8083/repository/docker-repo/mern_docker_demo_library-api

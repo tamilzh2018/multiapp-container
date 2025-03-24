@@ -12,8 +12,22 @@ spec:
       labels:
         app: mongo-db
     spec:
+      imagePullSecrets:
+      - name: docker-cred
       containers:
       - name: mongo-db
         image: 192.168.126.128:8083/repository/docker-repo/mongo
         ports:
         - containerPort: 27017
+        env:
+          - name: MONGO_INITDB_ROOT_USERNAME
+            valueFrom:
+              secretKeyRef:
+                name: mongo-db-secret # Replace with your secret name
+                key: MONGO_ROOT_USERNAME
+          - name: MONGO_INITDB_ROOT_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: mongo-db-secret # Replace with your secret name
+                key: MONGO_ROOT_PASSWORD
+

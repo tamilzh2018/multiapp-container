@@ -2,10 +2,10 @@ apiVersion: v1
 kind: Service 
 metadata:
   name: nginx-service
+spec:
   selector:
     app: nginx-api
-spec:
-  type: ClusterIP
+  type: NodePort
   ports:
   - targetPort: 8080
     port: 80

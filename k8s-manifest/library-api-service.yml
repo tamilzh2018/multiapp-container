@@ -2,9 +2,9 @@ apiVersion: v1
 kind: Service 
 metadata:
   name: library-service
+spec:
   selector:
     app: library-api
-spec:
   type: ClusterIP
   ports:
   - targetPort: 5000
