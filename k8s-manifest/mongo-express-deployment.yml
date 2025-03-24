@@ -11,7 +11,7 @@ spec:
     metadata:
       name: mongo-express-gui
       labels:
-        app: mongo-db-deploy
+        app: mongo-express-gui
     spec:
       imagePullSecrets:
       - name: docker-cred
